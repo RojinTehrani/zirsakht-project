@@ -1,1 +1,5 @@
-<app-login></app-login>
+<p-picklist [source]="sourceProducts" [style]="" [target]="targetProducts" [dragdrop]="true" [responsive]="true" breakpoint="1400px">
+    <ng-template let-item #item>
+        {{ item.name }}
+    </ng-template>
+</p-picklist>
