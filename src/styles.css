@@ -1,2 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'normalize.css';
+@import "primeicons/primeicons.css";
+body {
+    text-align: right;
+    direction: rtl;
+}
+p {
+    margin: 0;
+}
+body,
+ul,
+li,
+p,
+a,
+label,
+input,
+div {
+    font-family: 'IRANSans', 'iconsax', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.h1 {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.h2 {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.h3 {
+    font-family: 'IRANSans', sans-serif;
+    font-size: 22px;
+}

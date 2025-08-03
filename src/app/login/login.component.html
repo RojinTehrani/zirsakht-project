@@ -1,11 +1,341 @@
-<div class="login-background bg-white d-flex justify-content-center align-items-center">
-    <div class="login-container bg-white row">
-        <div class="col-6 bg-secondary login-left-side d-flex justify-content-center align-items-center">
-            <div class="d-flex justify-content-center align-items-center flex-column">
-                <img src="./../../assets/zirsakht-logo.png" alt="" class="col-6">
-                <p class="logo-text col-9 text-white text-center">شرکت ارتباطات زیرساخت</p>
-            </div>
+<!-- بخش ورود -->
+<div
+  class="login-background bg-white d-flex flex-column flex-lg-row justify-content-center align-items-center position-relative"
+>
+  <!-- عکس های حاشیه ی باکس لاگین -->
+  <img
+    src="./../../assets/Untitled design (2).png"
+    alt=""
+    class="col-3 d-none d-lg-block"
+    style="position: absolute; left: 0; bottom: 1%"
+  />
+  <img
+    src="./../../assets/Untitled design (2).png"
+    alt=""
+    class="col-3 d-none d-lg-block"
+    style="position: absolute; right: 0; top: 1%; rotate: 180deg"
+  />
+
+   <!-- باکس ورود -->
+  <div
+    class="login-container col-11 col-lg-7 bg-white row d-flex flex-wrap-reverse"
+  >
+    <!-- قسمت راست ورود به سامانه که شامل فرم است و فقط در صفحات بزرگ نمایش داده میشود . -->
+    <!-- در گوشی این بخش نمایش داده نمیشود . -->
+    <div
+      class="col-lg-6 bg-white login-right-side d-none d-lg-flex align-items-center justify-content-center position-relative z-1"
+    >
+      <div class="col-10 login-form-box d-flex flex-column align-items-center">
+        <div
+          class="col-12 d-flex justify-content-center align-items-center flex-column"
+        >
+          <img
+            src="./../../assets/zirsakht-blue-logo.png"
+            alt=""
+            class="col-2 mt-3"
+          />
+          <p class="logo-text-sm fs-6 fw-bold col-9 text-center my-3">
+            ورود به سامانه تحت وب زیرساخت
+          </p>
         </div>
-        <div class="col-6 bg-white login-right-side"></div>
+        <div class="col-12 my-3">
+          <p-floatlabel variant="on">
+            <input
+              pInputText
+              id="on_label"
+              pSize="large"
+              autocomplete="off"
+              class="w-100"
+            />
+            <label for="on_label">نام کاربری</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-12 my-3">
+          <p-floatlabel variant="on">
+            <p-password
+              promptLabel="آماده بررسی امنیت رمز شما ... "
+              weakLabel="ضعیف"
+              mediumLabel="معمولی"
+              strongLabel="قدرتمند"
+              [toggleMask]="true"
+              [feedback]="false"
+              size="large"
+              class="w-100"
+            >
+              <ng-template #footer>
+                <p-divider />
+                <ul class="pl-2 my-0 leading-normal">
+                  <li>حداقل یک حرف کوچک</li>
+                  <li>حداقل یک حرف بزرگ</li>
+                  <li>حداقل یک عدد</li>
+                  <li>حداقل 8 کاراکتر</li>
+                </ul>
+              </ng-template>
+            </p-password>
+            <label for="on_label">رمز عبور</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-12 my-3">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <div class="col-7">
+              <p-floatlabel variant="on" style="direction: ltr">
+                <p-inputotp>
+                  <ng-template #input let-token let-events="events">
+                    <input
+                      class="custom-otp-input"
+                      (input)="events.input($event)"
+                      (keydown)="events.keydown($event)"
+                      type="text"
+                      [attr.value]="token"
+                      [maxLength]="1"
+                    />
+                  </ng-template>
+                </p-inputotp>
+              </p-floatlabel>
+            </div>
+            <div
+              class="col-4 bg-white d-flex justify-content-center align-items-center"
+              style="
+                height: 40px;
+                border: 2px solid #043f7b;
+                border-radius: 8px;
+              "
+            >
+              <p
+                style="
+                  font-size: 1rem;
+                  margin: 0;
+                  color: #043f7b;
+                  font-weight: 500;
+                "
+              >
+                1 5 4 4
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-3 my-4">
+          <button class="button-blue fs-6 w-100 p-2">ورود</button>
+        </div>
+      </div>
     </div>
+    <!-- قسمت پایین ورود به سامانه که شامل فرم است و فقط در صفحات گوشی نمایش داده میشود  -->
+    <!-- در صفحات بزرگ این بخش نمایش داده نمیشود . -->
+    <div
+      class="col-12 bg-white login-bottom-side d-flex d-lg-none align-items-center justify-content-center position-relative z-1"
+    >
+      <div class="col-10 login-form-box d-flex flex-column align-items-center">
+        <div
+          class="col-12 d-flex justify-content-center align-items-center flex-column"
+        >
+          <p class="logo-text-sm col-9 text-center my-3">ورود به سامانه</p>
+        </div>
+        <div class="col-12 my-3">
+          <p-floatlabel variant="on">
+            <input
+              pInputText
+              id="on_label"
+              pSize="large"
+              autocomplete="off"
+              class="w-100"
+            />
+            <label for="on_label">نام کاربری</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-12 my-3">
+          <p-floatlabel variant="on">
+            <p-password
+              promptLabel="آماده بررسی امنیت رمز شما ... "
+              weakLabel="ضعیف"
+              mediumLabel="معمولی"
+              strongLabel="قدرتمند"
+              [toggleMask]="true"
+              [feedback]="false"
+              size="large"
+              class="w-100"
+            >
+              <ng-template #footer>
+                <p-divider />
+                <ul class="pl-2 my-0 leading-normal">
+                  <li>حداقل یک حرف کوچک</li>
+                  <li>حداقل یک حرف بزرگ</li>
+                  <li>حداقل یک عدد</li>
+                  <li>حداقل 8 کاراکتر</li>
+                </ul>
+              </ng-template>
+            </p-password>
+            <label for="on_label">رمز عبور</label>
+          </p-floatlabel>
+        </div>
+        <div class="col-12 my-3">
+          <div class="d-flex justify-content-evenly align-items-center">
+            <div class="col-7">
+              <p-floatlabel variant="on" style="direction: ltr">
+                <p-inputotp>
+                  <ng-template #input let-token let-events="events">
+                    <input
+                      class="custom-otp-input"
+                      (input)="events.input($event)"
+                      (keydown)="events.keydown($event)"
+                      type="number"
+                      [attr.value]="token"
+                      [maxLength]="1"
+                    />
+                  </ng-template>
+                </p-inputotp>
+              </p-floatlabel>
+            </div>
+            <div
+              class="col-4 bg-white d-flex justify-content-center align-items-center"
+              style="
+                height: 40px;
+                border: 2px solid #043f7b;
+                border-radius: 8px;
+              "
+            >
+              <p
+                style="
+                  font-size: 1rem;
+                  margin: 0;
+                  color: #043f7b;
+                  font-weight: 500;
+                "
+              >
+                1 5 4 4
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-3 mb-4">
+          <button class="button-blue fs-6 w-100 p-3">ورود</button>
+        </div>
+      </div>
+    </div>
+    <!-- قسمت چپ ورود به سامانه که شامل لوگو زیر ساخت است و فقط در صفحات بزرگ نمایش داده میشود . -->
+    <!-- در گوشی این بخش نمایش داده نمیشود . -->
+    <div
+      class="col-lg-6 bg-secondary login-left-side d-none d-lg-flex justify-content-center align-items-center position-relative z-1"
+    >
+      <div class="d-flex justify-content-center align-items-center flex-column">
+        <img src="./../../assets/zirsakht-logo.png" alt="" class="col-6 mb-2" />
+        <p class="logo-text-lg col-9 text-white text-center">
+          شرکت ارتباطات زیرساخت
+        </p>
+      </div>
+    </div>
+    <!-- قسمت بالا ورود به سامانه که شامل لوگو زیر ساخت است و فقط در صفحات گوشی نمایش داده میشود .  -->
+    <!-- در صفحات بزرگ این بخش نمایش داده نمیشود . -->
+    <div
+      class="col-12 bg-secondary login-top-side d-flex d-lg-none justify-content-center align-items-center position-relative z-1 py-4 h-100"
+    >
+      <div
+        class="d-flex justify-content-center align-items-center flex-column mb-5"
+      >
+        <img src="./../../assets/zirsakht-logo.png" alt="" class="col-4 mb-2" />
+        <p class="logo-text-lg col-12 text-white text-center">
+          شرکت ارتباطات زیرساخت
+        </p>
+      </div>
+    </div>
+    <!-- دکمه های مربوط به جابجایی بین صفحات ورود و ثبت نام و سوالات متداول و تماس با ما -->
+    <div
+      class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center active-btn"
+    >
+      <p class="col-9 text-white text-center" style="font-size: 1vw">ورود</p>
+      <i
+        class="col-2 pi pi-sign-in text-white text-center"
+        style="font-size: 1vw"
+      ></i>
+    </div>
+    <div
+      class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
+      id="signin"
+    >
+      <p class="col-9 login-menu-option text-center">ثبت نام</p>
+      <i class="col-2 pi pi-user-plus login-menu-option text-center"></i>
+    </div>
+    <div
+      class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
+      id="contact-us"
+    >
+      <p class="col-9 login-menu-option text-center">تماس با ما</p>
+      <i class="col-2 pi pi-phone login-menu-option text-center"></i>
+    </div>
+    <div
+      class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
+      id="faq"
+    >
+      <p class="col-9 login-menu-option text-center">سوالات متداول</p>
+      <i class="col-2 pi pi-question login-menu-option text-center"></i>
+    </div>
+  </div>
+  <div
+    class="col-12 d-flex d-lg-none mt-4 justify-content-around p-2 position-sticky z-2"
+    style="
+      background-color: rgb(4, 63, 123);
+      bottom: 0;
+      border-radius: 12px 12px 0px 0px;
+      box-shadow: 0px -3px 25px -1px #ffffff;
+    "
+  >
+    <div
+      class="col-2 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="p-2 mb-2 d-flex justify-content-center align-items-center"
+        style="
+          background-color: #043f7b;
+          border: 1px solid #fff;
+          border-radius: 360px;
+        "
+      >
+        <i
+          class="pi pi-sign-in login-menu-option text-center"
+          style="color: #fff"
+        ></i>
+      </div>
+      <p class="text-white" style="font-size: 0.5rem; font-weight: bold">
+        ورود
+      </p>
+    </div>
+    <div
+      class="col-2 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="p-2 mb-2 d-flex justify-content-center align-items-center"
+        style="background-color: #fff; border-radius: 360px"
+      >
+        <i class="pi pi-user-plus login-menu-option text-center"></i>
+      </div>
+      <p class="text-white" style="font-size: 0.5rem; font-weight: bold">
+        ثبت نام
+      </p>
+    </div>
+    <div
+      class="col-2 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="p-2 mb-2 d-flex justify-content-center align-items-center"
+        style="background-color: #fff; border-radius: 360px"
+      >
+        <i class="pi pi-phone login-menu-option text-center"></i>
+      </div>
+      <p class="text-white" style="font-size: 0.5rem; font-weight: bold">
+        تماس با ما
+      </p>
+    </div>
+    <div
+      class="col-2 d-flex flex-column justify-content-center align-items-center"
+    >
+      <div
+        class="p-2 mb-2 d-flex justify-content-center align-items-center"
+        style="background-color: #fff; border-radius: 360px"
+      >
+        <i class="pi pi-question login-menu-option text-center"></i>
+      </div>
+      <p class="text-white" style="font-size: 0.5rem; font-weight: bold">
+        سوالات متداول
+      </p>
+    </div>
+  </div>
 </div>
