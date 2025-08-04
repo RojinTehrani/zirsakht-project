@@ -9,7 +9,7 @@ import { LoginComponent } from "./auth/login/login.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PickListModule, LoginComponent, PickListModule, ToggleButtonModule, LoginComponent],
+  imports: [RouterOutlet, PickListModule, LoginComponent, PickListModule, ToggleButtonModule, LoginComponent,SidebarMenuComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
