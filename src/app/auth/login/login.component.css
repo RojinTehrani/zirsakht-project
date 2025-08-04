@@ -1,0 +1,148 @@
+.login-background {
+  width: 100vw;
+  min-height: 100svh;
+  background-color: red;
+}
+
+.login-container {
+  background-color: #043f7b;
+  position: relative;
+  
+}
+.login-left-side {
+  background-image: url("./../../../assets/login-background.gif"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /* You must set a specified height */
+  background-position: right; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  border: 2px solid #043f7b;
+  border-right: none;
+  border-radius: 0px 0px 0px 12px;
+}
+.login-top-side {
+  background-image: url("./../../../assets/login-background-mobile.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  /* You must set a specified height */
+  background-position: bottom; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  border: 2px solid #043f7b;
+  border-bottom: none;
+  border-radius: 12px 12px 0px 0px;
+}
+.login-right-side {
+  border: 2px solid #043f7b;
+  border-left: none;
+  border-radius: 0px 12px 12px 0px;
+}
+.login-bottom-side {
+  border: 2px solid #043f7b;
+  border-top: none;
+  border-radius: 0px 0px 12px 12px;
+}
+.login-logo {
+  width: 80px;
+}
+.logo-text-sm {
+  font-size: 1.5rem;
+  color: #043f7b;
+  font-weight: bold;
+}
+.logo-text-lg {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.p-inputtext:enabled:focus {
+  border-color: #043f7b !important;
+  box-shadow: #043f7b;
+  outline: #043f7b;
+  outline-offset: #043f7b;
+}
+
+.p-floatlabel:has(input:focus) label {
+  color: #043f7b;
+}
+.p-floatlabel label {
+  font-size: 1rem;
+}
+:host ::ng-deep .p-password {
+  width: 100%;  
+}
+
+:host ::ng-deep .p-password .p-inputtext {
+  width: 100%;
+}
+
+:host ::ng-deep .p-password .p-inputtext:enabled:focus {
+  border-color: #043f7b !important;
+  box-shadow: #043f7b;
+  outline: #043f7b;
+  outline-offset: #043f7b;
+}
+
+.custom-otp-input {
+  width: 25%;
+  border-radius: 8px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid #043f7b;
+}
+
+.button-blue {
+  background-color: #043f7b;
+  color: white;
+  border-radius: 8px;
+
+}
+
+.active-btn {
+  background-color: #043f7b;
+  border-top: 0;
+  position: absolute;
+  left: -4.5%;
+  top: -0px;
+  z-index: 0;
+  border-radius: 20px 0px 0px 20px;
+  height: 10%;
+  transition: all 0.8s;
+}
+.deactive-btn {
+  background-color: #fff;
+  border: 1px solid #043f7b;
+  position: absolute;
+  left: -4.5%;
+  z-index: 0;
+  border-radius: 20px 0px 0px 20px;
+  height: 10%;
+  transition: left 0.8s;
+}
+.deactive-btn:hover {
+  background-color: #043f7b;
+  border: 1px solid #fff;
+  left: -16%;
+}
+.active-btn:hover{
+  left: -16%;
+}
+.deactive-btn:hover .login-menu-option {
+  color: #fff;
+  font-size: 1rem;
+}
+#login {
+  top: 0;
+}
+#signin {
+  top: 10.5%;
+}
+#contact-us {
+  top: 21%;
+}
+#faq {
+  top: 31.5%;
+}
+
+.login-menu-option {
+  font-size: 1rem;
+  color: #043f7b;
+}
