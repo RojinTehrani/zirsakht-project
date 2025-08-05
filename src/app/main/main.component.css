@@ -5,8 +5,9 @@
   box-shadow: 0px 0px 10px 5px rgba(90, 136, 181, 0.25);
 }
 .main {
-  background-color: var(--color-white);
-  height: 81vh;
+  background-color:inherit;
+  min-height: 81vh;
+  height: auto;
   margin-block: 2vh;
   border-radius: 12px;
   box-shadow: 0px 0px 10px 5px rgba(90, 136, 181, 0.25);
