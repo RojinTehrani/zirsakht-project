@@ -25,6 +25,7 @@ export class SidebarMenuComponent implements AfterViewInit {
             this.renderer.removeClass(dropdownMenu, 'show');
           } else {
             this.renderer.addClass(dropdownMenu, 'show');
+            
           }
         }
       });
@@ -44,6 +45,7 @@ export class SidebarMenuComponent implements AfterViewInit {
       document.querySelectorAll<HTMLElement>('.dropdown-container.open').forEach(openDropdown => {
         const menu = openDropdown.querySelector<HTMLElement>('.dropdown-menu');
         if (menu) toggleDropdown(openDropdown, menu, false);
+         this.renderer.removeClass(menu, 'show');
       });
     };
 

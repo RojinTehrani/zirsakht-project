@@ -1,9 +1,4 @@
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Linking Google Fonts for Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <!-- Mobile Sidebar Menu Button -->
     <button class="sidebar-menu-button">
       <span class="material-symbols-rounded">menu</span>
     </button>
@@ -11,95 +6,78 @@
       <!-- Sidebar Header -->
       <header class="sidebar-header">
         <a href="#" class="header-logo">
-          <img src="logo.png" alt="zirsakht" />
+          <img 
+         src="./../../assets/zirsakht-logo.png"
+          alt="zirsakht" />
         </a>
         <button class="sidebar-toggler">
           <span class="material-symbols-rounded">chevron_left</span>
         </button>
       </header>
+
       <nav class="sidebar-nav">
         <!-- Primary Top Nav -->
         <ul class="nav-list primary-nav">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <span class="material-symbols-rounded">dashboard</span>
-              <span class="nav-label">Dashboard</span>
+              <span class="nav-label">داشبورد</span>
             </a>
             <ul class="dropdown-menu">
               <li class="nav-item"><a class="nav-link dropdown-title">Dashboard</a></li>
             </ul>
-          </li>
+          </li> -->
           <!-- Dropdown -->
           <li class="nav-item dropdown-container">
             <a href="#" class="nav-link dropdown-toggle">
               <span class="material-symbols-rounded">calendar_today</span>
-              <span class="nav-label">Services</span>
+              <span class="nav-label">دسته‌بندی گزارشات</span>
               <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_down</span>
             </a>
             <!-- Dropdown Menu -->
             <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">IT Consulting</a></li>
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">Cloud Solutions</a></li>
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">Mobile Apps</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span class="material-symbols-rounded">notifications</span>
-              <span class="nav-label">Notifications</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a class="nav-link dropdown-title">Notifications</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span class="material-symbols-rounded">local_library</span>
-              <span class="nav-label">Resources</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a class="nav-link dropdown-title">Resources</a></li>
-            </ul>
-          </li>
-          <!-- Dropdown -->
-          <li class="nav-item dropdown-container">
-            <a href="#" class="nav-link dropdown-toggle">
-              <span class="material-symbols-rounded">star</span>
-              <span class="nav-label">Bookmarks</span>
-              <span class="dropdown-icon material-symbols-rounded" >keyboard_arrow_down</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">Saved Tutorials</a></li>
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">Favorite Blogs</a></li>
-              <li class="nav-item"><a href="#" class="nav-link dropdown-link">Resource Guides</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">گزارش پروژه‌های من</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">داشبورد پروژه‌ها</a></li>
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+
+          <li class="nav-item dropdown-container">
+            <a href="#" class="nav-link dropdown-toggle">
+              <span class="material-symbols-rounded">local_library</span>
+              <span class="nav-label">دسته‌بندی مدیریت</span>
+              <span class="dropdown-icon material-symbols-rounded">keyboard_arrow_down</span>
+            </a>
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">ایجاد گزارش</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">دسترسی‌ها</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">گزارش کنترلی</a></li>
+            </ul>
+          </li>
+
+      
+        
+          <!-- Dropdown -->
+          <li class="nav-item dropdown-container">
+            <a href="#" class="nav-link dropdown-toggle">
               <span class="material-symbols-rounded">extension</span>
-              <span class="nav-label">Extensions</span>
+              <span class="nav-label">دسته‌بندی بروزرسانی</span>
+              <span class="dropdown-icon material-symbols-rounded" >keyboard_arrow_down</span>
             </a>
             <ul class="dropdown-menu">
-              <li class="nav-item"><a class="nav-link dropdown-title">Extensions</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">وظایف من</a></li>
+              <li class="nav-item"><a href="#" class="nav-link dropdown-link">تائیدات من</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <span class="material-symbols-rounded">settings</span>
-              <span class="nav-label">setting</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a class="nav-link dropdown-title">Settings</a></li>
-            </ul>
-          </li>
+
         </ul>
         <!-- Secondary Bottom Nav -->
         <ul class="nav-list secondary-nav">
           <li class="nav-item">
             <a href="#" class="nav-link">
               <span class="material-symbols-rounded">help</span>
-              <span class="nav-label">Support</span>
+              <span class="nav-label">پشتیبانی</span>
             </a>
             <ul class="dropdown-menu">
               <li class="nav-item"><a class="nav-link dropdown-title">Support</a></li>
@@ -108,7 +86,7 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <span class="material-symbols-rounded">logout</span>
-              <span class="nav-label">sign out</span>
+              <span class="nav-label">خروج</span>
             </a>
             <ul class="dropdown-menu">
               <li class="nav-item"><a class="nav-link dropdown-title">Sign Out</a></li>
