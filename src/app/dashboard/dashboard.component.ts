@@ -26,16 +26,15 @@ export class DashboardComponent {
   constructor() {
     this.initChart();
   }
-
   initChart() {
     this.data = {
       labels: ['توسعه', 'طراحی', 'تست', 'مستندات'],
       datasets: [
         {
           data: [300, 200, 100, 150],
-          backgroundColor: [
-            '#42A5F5',
-            '#66BB6A',
+          backgroundColor: [ 
+            '#42A5F5', 
+            '#66BB6A', 
             '#FFA726',
             '#EC407A'
           ],
@@ -48,24 +47,38 @@ export class DashboardComponent {
         }
       ]
     };
-
+  
     this.options = {
-      cutout: '60%', // ضخامت حلقه داخلی
+      cutout: '60%',
       plugins: {
         legend: {
-          position: 'right', // موقعیت راهنمای نمودار
-          rtl: true // برای زبان‌های راست به چپ مثل فارسی
+          position: 'right',
+          labels: {
+            font: {
+              family: 'IRANSans', // فونت دلخواه
+            }
+          },
+          rtl: true
+        },
+        tooltip: {
+          bodyFont: {
+            family: 'IRANSans',
+          },
+          titleFont: {
+            family: 'IRANSans',
+          }
         },
         title: {
-          display: true,
+          display: false,
           text: 'لیست پروژه‌ها',
           font: {
-            size: 16
+            family: 'IRANSans',
           }
         }
       }
     };
   }
+  
 
 
   activeFilter = 'all';

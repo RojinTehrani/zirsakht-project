@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ToggleButtonModule } from 'primeng/togglebutton';
 import { PickListModule } from 'primeng/picklist';
 import { RouterOutlet } from '@angular/router';
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PickListModule, PickListModule, ToggleButtonModule,],
+  imports: [RouterOutlet, PickListModule, PickListModule, ToggleButtonModule, DashboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
