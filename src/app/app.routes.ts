@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
+import { MainComponent } from './main/main.component';
 
 
 export const routes: Routes = [
     {
-        path: '', // صفحه اول
+        path: '',
         redirectTo: 'login',
         pathMatch: 'full'
     },
@@ -12,19 +13,19 @@ export const routes: Routes = [
         path: 'login',
         component: LoginComponent,
         children: [
-            { path: '', redirectTo: 'signin', pathMatch: 'full' },
+            // { path: '', redirectTo: 'signin', pathMatch: 'full' },
             // { path: 'signin', component: SigninComponent },
             // { path: 'faq', component: FaqComponent },
         ]
     },
     {
-        // path: 'main',
-        // component: MainComponent,
-        // children: [
-        //     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-        //     // { path: 'dashboard', component: DashboardComponent },
-        //     // { path: 'profile', component: ProfileComponent },
-        // ]
+        path: 'main',
+        component: MainComponent,
+        children: [
+            // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            // { path: 'dashboard', component: DashboardComponent },
+            // { path: 'profile', component: ProfileComponent },
+        ]
     },
     {
         path: '**',

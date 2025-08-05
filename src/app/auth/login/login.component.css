@@ -1,11 +1,10 @@
 .login-background {
   width: 100vw;
   min-height: 100svh;
-  background-color: red;
+  background-color: #d7e8f7;
 }
 
 .login-container {
-  background-color: #043f7b;
   position: relative;
   
 }
@@ -108,8 +107,8 @@
   transition: all 0.8s;
 }
 .deactive-btn {
-  background-color: #fff;
-  border: 1px solid #043f7b;
+  background-color: #5a88b5				;
+  /* border: 1px solid #043f7b; */
   position: absolute;
   left: -4.5%;
   z-index: 0;
@@ -119,7 +118,7 @@
 }
 .deactive-btn:hover {
   background-color: #043f7b;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   left: -16%;
 }
 .active-btn:hover{

@@ -5,6 +5,8 @@ import { InputOtpModule } from 'primeng/inputotp';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
+import { RouterLink, RouterOutlet } from '@angular/router';
+
 
 
 
@@ -12,7 +14,7 @@ import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-login',
-  imports: [InputTextModule,FloatLabelModule,InputOtpModule,PasswordModule,DividerModule,ButtonModule],
+  imports: [InputTextModule, FloatLabelModule, InputOtpModule, PasswordModule, DividerModule, ButtonModule, RouterLink, RouterOutlet],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

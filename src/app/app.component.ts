@@ -3,13 +3,10 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { PickListModule } from 'primeng/picklist';
 import { RouterOutlet } from '@angular/router';
 
-import { SidebarMenuComponent } from './sidebar-menu-component/sidebar-menu-component';
-
-import { LoginComponent } from "./auth/login/login.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PickListModule, LoginComponent, PickListModule, ToggleButtonModule, LoginComponent],
+  imports: [RouterOutlet, PickListModule, PickListModule, ToggleButtonModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

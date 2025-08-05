@@ -1,6 +1,7 @@
+<router-outlet></router-outlet>
 <!-- بخش ورود -->
 <div
-  class="login-background bg-white d-flex flex-column flex-lg-row justify-content-center align-items-center position-relative"
+  class="login-background d-flex flex-column flex-lg-row justify-content-center align-items-center position-relative"
 >
   <!-- عکس های حاشیه ی باکس لاگین -->
   <img
@@ -18,7 +19,7 @@
 
    <!-- باکس ورود -->
   <div
-    class="login-container col-11 col-lg-7 bg-white row d-flex flex-wrap-reverse"
+    class="login-container col-11 col-lg-7 row d-flex flex-wrap-reverse"
   >
     <!-- قسمت راست ورود به سامانه که شامل فرم است و فقط در صفحات بزرگ نمایش داده میشود . -->
     <!-- در گوشی این بخش نمایش داده نمیشود . -->
@@ -115,7 +116,7 @@
           </div>
         </div>
         <div class="col-12 mt-3 my-4">
-          <button class="button-blue fs-6 w-100 p-2">ورود</button>
+          <button class="button-blue fs-6 w-100 p-2" routerLink="/main" routerLinkActive="router-link-active" >ورود</button>
         </div>
       </div>
     </div>
@@ -251,22 +252,22 @@
       class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
       id="signin"
     >
-      <p class="col-9 login-menu-option text-center">ثبت نام</p>
-      <i class="col-2 pi pi-user-plus login-menu-option text-center"></i>
+      <p class="col-9 login-menu-option text-white text-center">ثبت نام</p>
+      <i class="col-2 pi pi-user-plus login-menu-option text-white text-center"></i>
     </div>
     <div
       class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
       id="contact-us"
     >
-      <p class="col-9 login-menu-option text-center">تماس با ما</p>
-      <i class="col-2 pi pi-phone login-menu-option text-center"></i>
+      <p class="col-9 login-menu-option text-white text-center">تماس با ما</p>
+      <i class="col-2 pi pi-phone login-menu-option text-white text-center"></i>
     </div>
     <div
       class="col-2 p-2 d-none d-lg-flex justify-content-around align-items-center deactive-btn"
       id="faq"
     >
-      <p class="col-9 login-menu-option text-center">سوالات متداول</p>
-      <i class="col-2 pi pi-question login-menu-option text-center"></i>
+      <p class="col-9 login-menu-option text-white text-center">سوالات متداول</p>
+      <i class="col-2 pi pi-question login-menu-option text-white text-center"></i>
     </div>
   </div>
   <div

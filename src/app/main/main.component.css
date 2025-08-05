@@ -1,0 +1,16 @@
+.header {
+    background-color:  var(--color-primary);
+    height: 10vh;
+}
+.main {
+    background-color: var(--color-white);
+    height: 85vh;
+}
+.footer {
+    background-color: var(--color-primary);
+    height: 5vh;
+}
+.sidebar {
+    background-color: var(--color-mid-blue);
+
+}
