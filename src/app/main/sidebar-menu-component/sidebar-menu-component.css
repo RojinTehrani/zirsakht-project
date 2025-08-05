@@ -105,7 +105,8 @@ body {
   padding: 11px 15px;
   align-items: center;
   text-decoration: none;
-  border: 1px solid #043f7b;;
+  border: 1px solid #043f7b;
+  background-color: var(--color-mid-blue);
   transition: 0.4s ease;
 }
 

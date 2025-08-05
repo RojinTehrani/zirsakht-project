@@ -1,16 +1,18 @@
 .header {
-    background-color:  var(--color-primary);
+    background-color:  var(--color-mid-blue);
     height: 10vh;
 }
 .main {
-    background-color: var(--color-white);
+    background-color: var(--color-light-blue);
     height: 85vh;
 }
 .footer {
-    background-color: var(--color-primary);
+    background-color: var(--color-mid-blue)	
+
+	;
     height: 5vh;
 }
 .sidebar {
-    background-color: var(--color-mid-blue);
+    background-color: var(--color-primary);
 
 }
