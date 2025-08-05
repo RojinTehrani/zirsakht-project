@@ -4,10 +4,11 @@ import { PickListModule } from 'primeng/picklist';
 
 import { LoginComponent } from './login/login.component';
 import { RouterOutlet } from '@angular/router';
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, PickListModule, LoginComponent],
+  imports: [RouterOutlet, PickListModule, LoginComponent, DashboardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
