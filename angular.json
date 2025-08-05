@@ -22,6 +22,7 @@
             "styles": [
               "src/assets/css/Fonts.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/fractional-grid.min.css",
               "src/styles.css"
             ],
             "scripts": [
