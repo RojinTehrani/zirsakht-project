@@ -111,7 +111,7 @@ body {
 }
 
 .sidebar-nav .nav-item:is(:hover, .open)>.nav-link:not(.dropdown-title) {
-  color: #043f7b;
+  color: var(--color-primary);
   background: #EEF2FF;
 }
 
@@ -132,7 +132,7 @@ body {
   position: absolute;
   bottom: 35px;
   width: 100%;
-  background: #043f7b;
+  background: var(--color-primary);
 }
 
 .sidebar-nav .nav-item {
@@ -201,31 +201,7 @@ body {
 }
 
 /* Responsive media query code for small screens */
-@media (max-width: 768px) {
-  .sidebar-menu-button {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-    height: 40px;
-    width: 42px;
-    display: flex;
-    color: #F1F4FF;
-    background:#043f7b;
-  }
-
-  .sidebar.collapsed {
-    width: 270px;
-    right: -270px;
-  }
-
-  .sidebar.collapsed .sidebar-header .sidebar-toggler {
-    transform: none;
-  }
-
-  .sidebar.collapsed .sidebar-nav .primary-nav {
-    transform: translateY(15px);
-  }
-}
+/*   */
 
 body,
 .sidebar-nav,
@@ -250,7 +226,6 @@ body,
   }
 
 .sidebar:not(.collapsed) .dropdown-container.open > .dropdown-menu {
-  max-height: 500px; 
   opacity: 1;
   pointer-events: auto;
   transition: height 0.3s ease, opacity 0.3s ease;
@@ -260,15 +235,20 @@ body,
   content: none !important;
 }
 
-.sidebar {
+.sidebar.standalone {
   position: fixed;
-  top: 0;
-  left: auto;
   right: 0;
+  top: 0;
   z-index: 10;
-  width: 270px;
-  height: 100vh;
-  background-color: #043f7b;
+
+  background-color: var(--color-primary);
+  border-radius: 12px;
+  height: 96vh;
+  box-shadow: 0px 0px 10px 5px rgba(90, 136, 181, 0.25);
+}
+
+.sidebar {
+  width: 250px;
   transition: all 0.4s ease;
 }
 
@@ -286,12 +266,9 @@ body,
 
 .sidebar.collapsed .dropdown-menu {
   position: absolute;
-  width: 180px;
-  min-width: 180px;
-  max-width: 180px;
   top: 0;
   right: 100%;
-  background: #043f7b;
+  background: var(--color-primary);
   border-radius: 10px 10px 10px 10px;
   opacity: 0;
   pointer-events: none;
@@ -300,7 +277,9 @@ body,
   margin-left: 8px;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s; 
   transform: translateY(0);
-  z-index: 100; /* روی همه باشه */
+  z-index: 100;
+  max-width: 12rem;
+  min-width: 12rem;
 }
 
 

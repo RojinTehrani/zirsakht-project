@@ -1,11 +1,18 @@
 
-<div class="container-fluid" style="background-color: var(--color-light-blue);padding-block: 2vh;">
+<div   class="container-fluid" style="background-color: var(--color-light-blue);padding-block: 2vh;">
     <div class="row d-flex justify-content-evenly" style="height: 96vh;" >
-        <aside class="sidebar col-lg-1-3qtr  d-lg-flex justify-content-center align-items-center">
-            <!-- <app-sidebar-menu-component></app-sidebar-menu-component> -->
-            <h3 class="text-white">sidebar</h3>
-        </aside>
-        <div class="col-12 col-lg-9-3qtr" style="height: 96vh;border-radius: 12px;">
+        <!-- <aside class="d-lg-flex sidebar" 
+        [ngClass]="sidebarIsCollapsed ? ['col-lg-small'] : [ 'col-lg-1-3qtr']" 
+          > -->
+            <app-sidebar-menu-component class="d-lg-flex sidebar justify-content-center align-items-center"
+             [ngClass]="sidebarIsCollapsed ? ['col-lg-small'] : [ 'col-lg-1-3qtr']" 
+              [collapsedFromParent]="sidebarIsCollapsed"
+             (collapsedChanged)="onSidebarToggle($event)"></app-sidebar-menu-component>
+        <!-- </aside> -->
+        <div
+          [ngClass]="sidebarIsCollapsed ? ['col-12', 'col-lg-11'] : ['col-12', 'col-lg-9-3qtr']"
+           style="height: 96vh;border-radius: 12px;" 
+           >
             <div class="row">
                 <header class="header col-12 d-flex justify-content-center align-items-center">
 
