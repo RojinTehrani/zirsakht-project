@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 import { SidebarMenuComponent } from './sidebar-menu-component/sidebar-menu-component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { HostListener } from '@angular/core';
+import { Route,RouterModule } from '@angular/router';
+import { CreateReportFormComponent } from '../create-report-form/create-report-form.component';
+import { FloatLabelModule } from 'primeng/floatlabel';
 
 @Component({
   selector: 'app-main',
-  imports: [SidebarMenuComponent , DashboardComponent,CommonModule],
+  imports: [SidebarMenuComponent , DashboardComponent,CommonModule,RouterModule,CreateReportFormComponent,FloatLabelModule],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
+
 })
 export class MainComponent {
 sidebarIsCollapsed = false;

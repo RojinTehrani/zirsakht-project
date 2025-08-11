@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { MainComponent } from './main/main.component';
+import { CreateReportFormComponent } from './create-report-form/create-report-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 export const routes: Routes = [
@@ -18,13 +20,15 @@ export const routes: Routes = [
             // { path: 'faq', component: FaqComponent },
         ]
     },
+
     {
         path: 'main',
         component: MainComponent,
         children: [
-            // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-            // { path: 'dashboard', component: DashboardComponent },
-            // { path: 'profile', component: ProfileComponent },
+            { path: 'dashboard', component: DashboardComponent },
+            { path: 'report', component: CreateReportFormComponent },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
         ]
     },
     {

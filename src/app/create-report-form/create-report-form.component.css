@@ -1,0 +1,90 @@
+:host ::ng-deep .p-floatlabel{
+
+}
+.p-inputtext:enabled:focus {
+  border-color: #043f7b !important;
+  box-shadow: #043f7b;
+  outline: #043f7b;
+  outline-offset: #043f7b;
+}
+.p-floatlabel:has(input:focus) label {
+  color: #043f7b !important;
+}
+
+.p-textarea:enabled:focus{
+  border-color: #043f7b !important;
+  box-shadow: #043f7b;
+  outline: #043f7b;
+  outline-offset: #043f7b;
+
+}
+.p-floatlabel:has(textarea:focus) label {
+  color: #043f7b !important;
+}
+/* برای حالت چک‌شده */
+::ng-deep .custom-checkbox.p-checkbox-checked .p-checkbox-box {
+  border-color: #043f7b !important;
+  background-color: var(--color-mid-blue) !important;
+}
+
+
+
+/* استایل مولتی سلکت */
+/* رنگ پس‌زمینه آیتم در حالت هاور */
+/* حالت فوکوس روی خود کنترل */
+.custom-multiselect.p-focus {
+  border-color: #043f7b !important;
+  color: #043f7b !important;
+}
+
+/* وقتی چک‌باکس انتخاب شده */
+::ng-deep p-checkbox[data-p-checked="true"] .p-checkbox-box {
+  border-color: #043f7b !important;
+  background-color: var(--color-mid-blue) !important;
+}
+
+/* وقتی هاور میشه */
+::ng-deep p-checkbox:hover .p-checkbox-box {
+  border-color: #043f7b !important;
+}
+
+/* وقتی انتخاب‌شده و هاور همزمان */
+::ng-deep p-checkbox[data-p-checked="true"]:hover .p-checkbox-box {
+  border-color: #043f7b !important;
+  background-color: var(--color-mid-blue) !important;
+}
+
+
+
+
+
+/* آیتم انتخاب‌شده */
+::ng-deep .p-multiselect-item.p-highlight {
+  background-color: #d6eaff !important; /* آبی ملایم */
+  color: #043f7b !important;
+}
+
+/* آیتم انتخاب‌شده + هاور */
+::ng-deep .p-multiselect-item.p-highlight:hover {
+  background-color: #b3d8ff !important; /* آبی کمی تیره‌تر */
+  color: #043f7b !important;
+}
+
+/* آیتم فقط هاور شده (انتخاب نشده) */
+::ng-deep .p-multiselect-item:hover {
+  background-color: #f0f7ff !important; /* آبی خیلی روشن */
+  color: #043f7b !important;
+}
+
+
+/* وقتی انتخاب و فوکوس شده */
+::ng-deep .p-multiselect-option.p-multiselect-option-selected.p-focus {
+  background: #FFFBDE !important;
+  color: #043f7b !important;
+}
+
+/* وقتی فقط انتخاب شده */
+::ng-deep .p-multiselect-option.p-multiselect-option-selected {
+  background:var(--color-mid-blue) !important;
+  color: #FFFBDE !important;
+}

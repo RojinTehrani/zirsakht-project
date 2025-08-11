@@ -1,0 +1,76 @@
+
+
+<div class="col-12 py-4 w-100 rounded d-flex justify-content-center align-items-center"
+
+style="min-height: 81vh;background-color: white;">
+
+
+<div class="card flex justify-center" style="width: 90%;">
+    <p-panel header="ایجاد گزارش">
+       
+
+        <div class="mt-4 p-2 z-2">
+         <p-floatlabel variant="on">
+          
+            <input
+              pInputText
+              id="on_label"
+              pSize="large"
+              autocomplete="off"
+              class="w-100"
+              pTooltip="لطفا عنوان گزارش خود را وارد کنید." tooltipPosition="top"
+            />
+            <label for="on_label">عنوان گزارش</label>
+          </p-floatlabel>
+        </div>
+
+        <div class="ms-2 mt-4 p-2 z-2">
+          <p-floatlabel variant="on">
+              <textarea pTextarea id="over_label"  rows="6" cols="50" style="resize: none" class="h-full w-100"
+               pTooltip="لطفا توضیحات خود را وارد کنید." tooltipPosition="top"
+              ></textarea>
+              <label for="on_label">توضیحات</label>
+          </p-floatlabel>
+          </div>
+
+    <div class="row ms-2 mt-4 p-2 z-2">
+       <div class="col-6">
+    <p-floatlabel class="w-full" variant="on" >
+        <p-multiselect id="on_label"  [options]="reportTypes" optionLabel="label" filter [maxSelectedLabels]="3" 
+        class="w-full w-75 custom-multiselect"
+        panelStyleClass="custom-multiselect-panel"
+        [ngClass]="'custom-multiselect'"
+        pTooltip="نوع گزارش را انتخاب کنید." tooltipPosition="left"
+        />
+        <label for="on_label">نوع گزارش</label>
+    </p-floatlabel>
+       </div>
+
+    <div class="col-6 d-flex items-center justify-content-center justify-center">
+    <p-checkbox [ngClass]="'custom-checkbox'" inputId="ingredient1" name="pizza" value="Cheese" 
+    />
+    <label for="ingredient1" class="me-2 justify-center"> آیا گزارش فعال است؟ </label>
+    </div>
+
+      </div>
+
+
+        <div class="row  mt-4 p-2">
+          <div class="col-6">
+        <p-button label="ذخیره" severity="secondary" [style]="{'width': '100%'}" icon="pi pi-check" />
+        </div>
+        <div class="col-6">
+          <p-button label="انصراف"  icon="pi pi-times" [style]="{'width': '100%'}" variant="outlined" severity="danger" />
+        </div>
+        </div>
+
+    </p-panel>
+
+
+
+  
+</div>
+
+</div>
+
+

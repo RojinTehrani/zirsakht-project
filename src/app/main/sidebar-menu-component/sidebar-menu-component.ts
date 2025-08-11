@@ -1,8 +1,11 @@
 import { AfterViewInit, Component, ElementRef, Renderer2,Output,EventEmitter,Input,SimpleChanges,OnChanges  } from '@angular/core';
+
+import { Route,RouterModule } from '@angular/router';
 @Component({
   selector: 'app-sidebar-menu-component',
   templateUrl: './sidebar-menu-component.html',
-  styleUrls: ['./sidebar-menu-component.css']
+  styleUrls: ['./sidebar-menu-component.css'],
+  imports: [RouterModule]
 })
 export class SidebarMenuComponent  implements AfterViewInit, OnChanges {
 
@@ -126,8 +129,17 @@ private updateSidebarClass(): void {
 
   this.isCollapsed = !this.isCollapsed;
   this.collapsedChanged.emit(this.isCollapsed);
+  (document.activeElement as HTMLElement)?.blur();
   this.updateSidebarClass();
+
+
+
+
 }
+
+
+
+
 
 
 
